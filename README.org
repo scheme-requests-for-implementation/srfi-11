@@ -10,6 +10,8 @@ This repository hosts [[https://srfi.schemers.org/srfi-11/][SRFI 11]]: Syntax fo
 
 This SRFI is in /final/ status.
 
+See also [[https://srfi.schemers.org/srfi-8/][SRFI 8: receive: Binding to multiple values]], [[https://srfi.schemers.org/srfi-71/][SRFI 71: Extended LET-syntax for multiple values]], and [[https://srfi.schemers.org/srfi-210/][SRFI 210: Procedures and Syntax for Multiple Values]].
+
 The full documentation for this SRFI can be found in the [[https://srfi.schemers.org/srfi-11/srfi-11.html][SRFI Document]].
 
 If you'd like to participate in the discussion of this SRFI, or report issues with it, please [[https://srfi.schemers.org/srfi-11/][join the SRFI-11 mailing list]] and send your message there.
