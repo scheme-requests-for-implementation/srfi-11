@@ -1,11 +1,11 @@
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<!DOCTYPE html PUBLIC "-//IETF//DTD HTML//EN" "http://www.w3.org/TR/html.dtd">
 <html lang="en">
   <head>
     <title>SRFI 11: Syntax for receiving multiple values</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://srfi.schemers.org/srfi.css" type="text/css" />
-    <link href="/favicon.png" rel="icon" sizes="192x192" type="image/png">
+    <link href="/favicon.png" rel="icon" sizes="192x192" type="image/png" />
   </head>
 
   <body>
@@ -17,13 +17,13 @@
 <h2>Status</h2>
 
 <p>This SRFI is currently in <em>final</em> status.  Here is <a href="https://srfi.schemers.org/srfi-process.html">an explanation</a> of each status that a SRFI can hold.  To provide input on this SRFI, please send email to <code><a href="mailto:srfi+minus+11+at+srfi+dotschemers+dot+org">srfi-11@<span class="antispam">nospam</span>srfi.schemers.org</a></code>.  To subscribe to the list, follow <a href="https://srfi.schemers.org/srfi-list-subscribe.html">these instructions</a>.  You can access previous messages via the mailing list <a href="https://srfi-email.schemers.org/srfi-11">archive</a>.</p>
-<UL>
-<LI>Received: 1999-09-10
-<LI>Draft: 1999-09-14--1999-11-12
-<LI>Revised: 1999-11-01
-<LI>Revised: 2000-03-15
-<LI>Final: 2000-03-15
-</UL>
+<ul>
+<li>Received: 1999-09-10
+</li><li>Draft: 1999-09-14--1999-11-12
+</li><li>Revised: 1999-11-01
+</li><li>Revised: 2000-03-15
+</li><li>Final: 2000-03-15
+</li></ul>
 
 <h2>Abstract</h2>
 
@@ -45,9 +45,10 @@ receiving multiple values.
 <dl>
 <dt id="let-values">
 <tt>(LET-VALUES ((&lt;formals&gt; &lt;expression&gt;) ...) &lt;body&gt;)</tt>
-<br>Syntax
+<br />Syntax
+</dt>
 <dd>
-<p>Each &lt;formals&gt; should be a formal arguments list as for a LAMBDA 
+<p>Each &lt;formals&gt; should be a formal arguments list as for a LAMBDA
    expression, cf section 4.1.4 of the R5RS.</p>
 
 <p>The &lt;expression&gt;s are evaluated in the current environment, the 
@@ -73,12 +74,13 @@ receiving multiple values.
                  (list a b x y)))       --&gt; (x y a b)
 </pre>
 </p>
-
+</dd>
 <dt id="let*-values">
 <tt>(LET*-VALUES ((&lt;formals&gt; &lt;expression&gt;) ...) &lt;body&gt;)</tt>
-<br>Syntax
+<br />Syntax
+</dt>
 <dd>
-<p>Each &lt;formals&gt; should be a formal arguments list as for a LAMBDA 
+<p>Each &lt;formals&gt; should be a formal arguments list as for a LAMBDA
    expression, cf section 4.1.4 of the R5RS.</p>
 
 <p>LET*-VALUES is similar to LET-VALUES, but the bindings are performed
@@ -87,26 +89,25 @@ receiving multiple values.
    expression to the right of the binding.  Thus the second binding is done in
    an environment in which the first binding is visible, and so on.</p>
 
-<p>
 <pre>
              (let ((a 'a) (b 'b) (x 'x) (y 'y))
                (let*-values (((a b) (values x y))
                              ((x y) (values a b)))
                  (list a b x y)))       --&gt; (x y x y)
 </pre>
-</p>
+</dd>
 </dl>
 
-<h2>Implementation</h2>
 
+<h2>Implementation</h2>
+<p>
 The following implementation is written in R5RS Scheme.  It is not
 compatible with the IEEE Scheme standard because the IEEE standard does
 not contain the high-level macro system.
-
+</p>
 <p>The implementation assumes that some top-level names defined by the
 R5RS are bound to their original values.
-
-<p>
+</p>
 <pre>
 ;; This code is in the public domain.
 
@@ -148,7 +149,6 @@ R5RS are bound to their original values.
 
 <h2>Copyright</h2>
 <p>Copyright (C) Lars T Hansen (1999). All Rights Reserved.</p>
-
 <p>
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
@@ -171,8 +171,7 @@ LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 </p>
-
-    <hr>
+    <hr />
     <address>Editor: <a href="mailto:srfi minus editors at srfi dot schemers dot org">Mike Sperber</a></address>
 <!-- Created: Tue Sep 29 19:20:08 EDT 1998 -->
 <!-- hhmts start -->
