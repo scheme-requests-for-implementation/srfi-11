@@ -63,7 +63,6 @@ receiving multiple values.
    error for an &lt;expression&gt; to return a number of values that does
    not match its corresponding &lt;formals&gt;.</p>
 
-<p>
 <pre>
              (let-values (((a b . c) (values 1 2 3 4)))
                (list a b c))            --&gt; (1 2 (3 4))
